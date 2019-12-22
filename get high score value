@@ -1,0 +1,30 @@
+ye get highscore value ka methid hai
+
+
+public String GetHighScoreValue()
+	{
+		FileReader readFile=null;
+		BufferedReader reader=null;
+		try {
+			readFile =new FileReader("highscore.dat");
+	 reader=new BufferedReader(readFile);
+	return reader.readLine();
+		} 
+		catch (Exception e)
+		{
+	
+		return "Nobody:0";
+	     }
+		finally
+		{
+			
+			try {
+				if(reader !=null)
+				reader.close();
+			} catch (IOException e) {
+			
+				e.printStackTrace();
+			}	
+		}}
+	
+	
