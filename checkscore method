@@ -1,0 +1,35 @@
+
+ye checkscore ka method hai
+
+public void CheckScore(){
+		System.out.println(highScore);
+		if(score >Integer.parseInt((highScore.split(":")[1])))
+		{
+			String name=JOptionPane.showInputDialog("you set your high score here");
+		highScore=name+":"+score;
+		File scoreFile=new File("highscore.dat");
+		if(!scoreFile.exists());
+		{
+			try{
+				scoreFile.createNewFile();
+			}catch (IOException e){
+				e.printStackTrace();
+			}
+		}
+		FileWriter writeFile=null;
+		BufferedWriter writer=null;
+		try
+		{
+			writeFile =new FileWriter(scoreFile);
+		    writer=new BufferedWriter(writeFile);
+		    writer.write(this.highScore);
+		}
+		catch (Exception e)
+		{
+}
+		finally{
+			try{
+			if(writer !=null)
+				writer.close();}
+		catch(Exception e){
+			}}}}
