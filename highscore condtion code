@@ -1,0 +1,8 @@
+graphics context key ander jo if else ki conditon lagai hai ye us ka code hai 
+
+
+gc.fillText("High score:" +highScore,0,BOX_HEIGHT * GRID_HEIGHT+20);
+	if(highScore.equals(""))
+	{
+		highScore=this.GetHighScoreValue();
+	}
